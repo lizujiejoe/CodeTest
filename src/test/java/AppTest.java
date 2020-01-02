@@ -37,13 +37,28 @@ public class AppTest {
         App.CartesianProduct(input, result, 0, new ArrayList<String>());
 
         for (List<String> item : result) {
-            System.out.println(item);
+            System.out.print(String.join("", item) + " ");
         }
     }
 
     @Test
     public void getStringListEx() {
-        List<List<String>> result = App.GetStringListEx(new int[]{9, 22});
+        List<List<String>> result = App.GetStringListEx(new int[]{9, 37});
+        for (List<String> item : result) {
+            System.out.println(item);
+        }
+    }
+
+    @Test
+    public void cartesianProductEx() {
+        List<List<String>> input = App.GetStringListEx(new int[]{39, 57, 64});
+        for (List<String> item : input) {
+            System.out.println(item);
+        }
+
+        List<List<String>> result = new ArrayList<List<String>>();
+        App.CartesianProduct(input, result, 0, new ArrayList<String>());
+
         for (List<String> item : result) {
             System.out.println(item);
         }
